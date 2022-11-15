@@ -4,7 +4,7 @@
   @media (max-width: 767.98px) {
     padding-bottom: 60px;
     padding-top: 45px;
-    background: #0E1014;
+    background: #0e1014;
     position: relative;
     z-index: 3;
   }
@@ -69,6 +69,13 @@
 }
 
 .column-footer {
+  // .column-footer__links
+
+  &__links {
+    display: flex;
+    gap: 52px;
+  }
+
   // .column-footer__title
 
   &__title {
@@ -79,13 +86,6 @@
     color: #656566;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-  }
-
-  // .column-footer__list--menu
-
-  &__list--menu {
-    display: flex;
-    gap: 52px;
   }
 
   // .column-footer__item
