@@ -1,0 +1,62 @@
+@use "sass:math";
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import "mixins";
+
+$fontFamily: "Inter";
+$fontSize: rem(16);
+$mainColor: #E4E5EA;
+
+// НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
+// Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1440;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1170;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+@import "null";
+
+body {
+  background: #0E1014;
+     // Скролл заблокирован
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+   // Прижимаем footer
+   > main {
+      flex: 1 1 auto;
+   }
+   // Фикс для слайдеров
+   > * {
+      min-width: 0;
+   }
+}
+
+.container {
+   max-width: 1170px;
+   margin: 0 auto;
+   padding:0 15px;
+}
+
+
+@import "common";
+@import "header";
+@import "index";
+@import "footer";

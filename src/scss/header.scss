@@ -1,0 +1,121 @@
+.header {
+  padding-top: 46px;
+  @media (max-width:767.98px){
+     padding-top: 15px;
+     padding-bottom: 15px;
+     background: #0E1014;
+     position: relative;
+     z-index: 3;
+  }
+
+  // .header__container
+
+  &__container {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    @media (max-width:767.98px){
+       overflow-y: scroll;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 12px;
+    img {
+      width: 140px;
+      height: 24px;
+    }
+    span {
+      font-family: "Montserrat";
+      max-width: 165px;
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 120%;
+    }
+    @media (max-width:991.98px){
+      display: none;
+    }
+  }
+
+  // .header__phone
+
+  &__phone {
+    transition: color 0.3s ease 0s;
+    white-space: nowrap;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fcb045;
+      }
+    }
+    @media (max-width:767.98px){
+       display: none;
+    }
+  }
+
+}
+
+.menu {
+  flex: 1 1 auto;
+  // .menu__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    @media (max-width:767.98px){
+       flex-wrap: nowrap;
+       gap: 15px;
+       font-size: 12px;
+    }
+  }
+
+
+  // .menu__link
+
+  &__link {
+    padding: 5px;
+    transition: color 0.3s ease 0s;
+    font-weight: 500;
+    @media (max-width:767.98px){
+       text-transform: uppercase;
+       padding: 0;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fcb045;
+      }
+    }
+    @media (max-width:479.98px){
+       padding: 1px;
+    }
+  }
+}
+.social {
+  margin-left: 20px;
+  display: flex;
+  gap: 20px;
+  @media (max-width:991.98px){
+    margin-left: 15px;
+  }
+  @media (max-width:767.98px){
+     display: none;
+  }
+  // .social_item
+
+  &_item {
+    padding: 0 5px;
+    transition: transform 0.3s ease 0s;
+    will-change: transform;
+    @media (any-hover: hover) {
+      &:hover {
+      transform: scale(1.5);
+     }
+    }
+  }
+}

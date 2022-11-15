@@ -1,0 +1,14 @@
+.button {
+  font-weight: 500;
+  background-color: #4077f3;
+  transition: background-color 0.3s ease 0s;
+  padding: 21px 35px;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #0f3794;
+    }
+  }
+  &:active {
+    background-color: #0c2255;
+  }
+}
